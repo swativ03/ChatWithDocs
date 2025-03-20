@@ -40,6 +40,11 @@ This project is a multi-user document search and Q&A system that enables users t
 5. **Run the Streamlit app**
     streamlit run app.py
 
+6. **Run document_loader_processor.py**
+     If you are adding new files to docs folder:
+      1) add relevant details in USER_ACCESS dict in document_loader_processor.py to manage access
+      2) run the code python backend/document_loader_processor.py  to create and save respective chunks with metadata in chromadb
+
 ## Future Improvements
     - Better Table Parsing – Extend load_pdf() to handle different table formats for more accurate data extraction.
 
