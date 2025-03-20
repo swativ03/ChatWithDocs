@@ -3,7 +3,8 @@
 ## Multi-User Document Search Streamlit App  
 
 This project is a multi-user document search and Q&A system that enables users to query their uploaded documents and retrieve relevant information efficiently. The system ensures user-specific access control, allowing each user to access only their authorized documents.
-DEMO : [![Watch the demo](https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/1t2P6kQZ0iMOr-FLByt7QJpoiS6oY36xV/view?usp=sharing)
+
+[![Watch the demo](https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/1t2P6kQZ0iMOr-FLByt7QJpoiS6oY36xV/view?usp=sharing)
 
 ## Features
 - Secure login system to maintain user-specific document access.
