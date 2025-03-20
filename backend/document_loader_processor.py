@@ -67,28 +67,6 @@ def format_tables_as_text(tables):
         formatted_tables.append(table_str) 
     return formatted_tables
 
-# def format_tables_as_text(tables):
-#     """Formats extracted tables in a structured way while preserving readability."""
-    
-#     formatted_tables = []
-    
-#     for page_num, table in tables:  # Ensure we keep track of page numbers
-#         if not table:  
-#             continue  # Skip empty tables
-
-#         # Normalize table structure: Ensure None values are replaced and trimmed
-#         formatted_rows = []
-#         for row in table.split("\n"):  # Assuming tables are now strings with line breaks
-#             cells = row.split(" | ")
-#             clean_cells = [cell.strip() if cell else "N/A" for cell in cells]
-#             formatted_rows.append(" | ".join(clean_cells))  
-
-#         table_str = "\n".join(formatted_rows)
-        
-#         # Store formatted table with page number for better tracking
-#         formatted_tables.append((page_num, table_str))
-    
-#     return formatted_tables
 
 def chunk_documents_with_metadata(documents, tables, pdf_filename):
     """Splits the documents into chunks with user access metadata."""
@@ -130,10 +108,6 @@ def store_in_chroma_with_metadata(chunks, persist_directory="chroma_db"):
         shutil.rmtree(persist_directory)  # Removes the entire directory and its contents
         print(f"Deleted existing ChromaDB at {persist_directory}, creating a new one.")
     
-    for chunk in chunks:
-        print(f"Stored Chunk:\n{chunk.page_content}\nMetadata: {chunk.metadata}\n")
-
-
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     vector_store = Chroma.from_documents(chunks, 
                                          embedding=embeddings, 
