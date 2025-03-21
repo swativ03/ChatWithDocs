@@ -20,7 +20,7 @@ This project is a multi-user document search and Q&A system that enables users t
 ## Installation and Setup
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/swativ03/ChatWithDocs.git)
    cd your-repo-name
 
 2. **Create a virtual environment (optional but recommended)**
